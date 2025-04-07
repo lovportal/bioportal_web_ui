@@ -1,4 +1,4 @@
-set :author, "ontoportal-lirmm"
+set :author, "lovportal"
 set :application, "bioportal_web_ui"
 
 set :repo_url, "https://github.com/#{fetch(:author)}/#{fetch(:application)}.git"
@@ -11,6 +11,7 @@ set :deploy_via, :remote_cache
 # default deployment branch is master which can be overwritten with BRANCH env var
 # BRANCH env var can be set to specific branch of tag, i.e 'v6.8.1'
 
+set :branch, ENV['BRANCH'] if ENV['BRANCH']
 
 # Default deploy_to directory is /var/www/my_app
 set :deploy_to, "/srv/ontoportal/#{fetch(:application)}"
@@ -75,23 +76,15 @@ set :passenger_restart_with_touch, true
 #     auth_methods: %w(publickey password)
 #     # password: 'please use keys'
 #   }
-# setting per server overrides global ssh_options
 
-SSH_JUMPHOST = ENV.include?('SSH_JUMPHOST') ? ENV['SSH_JUMPHOST'] : 'jumpbox.hostname.com'
-SSH_JUMPHOST_USER = ENV.include?('SSH_JUMPHOST_USER') ? ENV['SSH_JUMPHOST_USER'] : 'username'
-
-JUMPBOX_PROXY = "#{SSH_JUMPHOST_USER}@#{SSH_JUMPHOST}"
 set :ssh_options, {
   user: 'ontoportal',
-  forward_agent: 'true',
   keys: %w(config/deploy_id_rsa),
   auth_methods: %w(publickey),
-  # use ssh proxy if UI servers are on a private network
-  proxy: Net::SSH::Proxy::Command.new("ssh #{JUMPBOX_PROXY} -W %h:%p")
 }
 
 #private git repo for configuraiton
-PRIVATE_CONFIG_REPO = ENV.include?('PRIVATE_CONFIG_REPO') ? ENV['PRIVATE_CONFIG_REPO'] : 'https://your_github_pat_token@github.com/your_organization/ontoportal-configs.git'
+PRIVATE_CONFIG_REPO = ENV.include?('PRIVATE_CONFIG_REPO') ? ENV['PRIVATE_CONFIG_REPO'] : 'https://personal_access_token@github.com/lovportal/ontoportal-configs.git'
 desc "Check if agent forwarding is working"
 task :forwarding do
   on roles(:all) do |h|
