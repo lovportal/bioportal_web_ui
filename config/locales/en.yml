@@ -1,5 +1,6 @@
 ---
 en:
+  Exporter les utilisateurs de la machine virtuelle en CSV: Appliance ID
   activaterecord:
     errors:
       models:
@@ -13,11 +14,11 @@ en:
   admin:
     analytics:
       active_users: Active users
-      ontologies_count: "%{size} new ontology(ies) this year"
-      ontologies_with_errors: Ontologies with errors
-      ontology_visits: Ontology visits
+      ontologies_count: "%{size} new vocabulary(ies) this year"
+      ontologies_with_errors: Vocabularies with errors
+      ontology_visits: Vocabulary visits
       page_visits: Page visits of this month
-      total_ontologies: Total Ontologies
+      total_ontologies: Total Vocabularies
       total_visits: Total visits
       unique_users_visits: Unique users visits
       visit_users: "%{visits} users since last month"
@@ -43,7 +44,7 @@ en:
         created: Created
         description: Description
         name: Name
-        ontologies: Ontologies
+        ontologies: Vocabularies
         parent_category: Parent category
       index:
         actions: Actions
@@ -76,7 +77,7 @@ en:
         created: Created
         description: Description
         name: Name
-        ontologies: Ontologies
+        ontologies: Vocabularies
       group_added_successfully: New group added successfully
       group_created: Group successfully created in %{time}s
       group_deleted_successfully: Group successfully deleted in %{time}s
@@ -108,7 +109,7 @@ en:
       licensed_to: Licensed to
       licensing: Licensing
       metadata_administration: Metadata Administration
-      ontology_administration: Ontology Administration
+      ontology_administration: Vocabulary Administration
       persons_and_organizations: Persons & Organizations
       renew_license: Renew license
       report_generated_on: 'Report generated on:'
@@ -157,30 +158,30 @@ en:
       version_management: Version management
     memcache:
       title: Memcache stats
-    new_ontologies_created_title: 'The following ontologies: %{count} were created
+    new_ontologies_created_title: 'The following vocabularies: %{count} were created
       in this year'
     no_flush_command: The UI cache does not respond to the 'flush_all' command
-    no_ontologies_parameter_passed: 'No ontologies parameter passed. Syntax: ?ontologies=ONT1,ONT2,...,ONTN'
-    no_record_exists: No record exists for ontology %{acronym}
+    no_ontologies_parameter_passed: 'No vocabularies parameter passed. Syntax: ?vocabularies=VOC1,VOC2,...,VOCN'
+    no_record_exists: No record exists for vocabulary %{acronym}
     no_reset_command: The UI cache does not respond to the 'reset' command
-    ontologies_report_retrieved: Ontologies Report - retrieved %{ontologies} ontologies
+    ontologies_report_retrieved: Vocabularies Report - retrieved %{vocabularies} vocabularies
       in %{time}s"
-    ontology_not_found: Ontology %{ont} was not found
-    ontology_not_found_system: Ontology %{ont} was not found,
-    ontology_process_error: 'Problem %{error_keyword} ontology %{ont} - %{class}:
+    ontology_not_found: Vocabulary %{ont} was not found
+    ontology_not_found_system: Vocabulary %{ont} was not found,
+    ontology_process_error: 'Problem %{error_keyword} vocabulary %{ont} - %{class}:
       %{message},'
-    ontology_process_success: Ontology %{ont} %{success_keyword} successfully,
+    ontology_process_success: Vocabulary %{ont} %{success_keyword} successfully,
     parse_log:
       log_file: 'Log file: %{path}'
       title: Parse log for %{acronym}
-    problem_deleting_submission: 'Problem deleting submission %{id} for ontology %{ont}
-      - %{class}: %{message}'
+    problem_deleting_submission: 'Problem deleting submission %{id} for vocabulary
+      %{ont} - %{class}: %{message}'
     problem_refreshing_report: 'Problem refreshing report - %{class}: %{message}'
-    problem_retrieving_ontologies: Problem retrieving ontologies report - %{message}
+    problem_retrieving_ontologies: Problem retrieving vocabularies report - %{message}
     query_not_permitted: Query not permitted
-    refresh_report_with_ontologies: 'Refresh of report for ontologies: %{ontologies}
+    refresh_report_with_ontologies: 'Refresh of report for vocabularies: %{vocabularies}
       started successfully'
-    refresh_report_without_ontologies: Refresh of ontologies report started successfully
+    refresh_report_without_ontologies: Refresh of vocabularies report started successfully
     report_successfully_regenerated: Report successfully regenerated on %{report_date_generated}
     search:
       index:
@@ -190,7 +191,7 @@ en:
         generate_schema: Generate schema
         index_data: Index Data
         name: Name
-        ontology: Ontology
+        ontology: Vocabulary
         ontology_submission: Submission
         see_indexed_data: See indexed data
         see_schema: See schema
@@ -210,9 +211,9 @@ en:
         multi_valued: Multi valued
         stored: Stored
         type: Type
-    submission_deleted_successfully: Submission %{id} for ontology %{ont} was deleted
+    submission_deleted_successfully: Submission %{id} for vocabulary %{ont} was deleted
       successfully
-    submission_not_found: Submission %{id} for ontology %{ont} was not found
+    submission_not_found: Submission %{id} for vocabulary %{ont} was not found
     turbo_confirm: Are you sure you want to %{name}?
     update_info_successfully: Update information successfully retrieved
   agents:
@@ -222,6 +223,8 @@ en:
     agent_usages_updated: Agent usages successfully updated
     delete: Delete
     delete_error: Can't delete this %{agent} because still used
+    description: Discover the people and organizations that contribute, create, and
+      publish vocabularies
     errors:
       invalid_url: The identifier must be a valid ORCID/ROR URL
       required: is required and cannot be empty
@@ -247,7 +250,11 @@ en:
     modal_title: Agent "%{name}" usages
     not_found_agent: Agent with id %{id}
     not_used: Not used
-    ontology_not_valid: 'ontology is not valid, here are the errors: '
+    ontology_not_valid: 'vocabulary is not valid, here are the errors: '
+    profile:
+      contributed_in: Contributed in
+      metadata: Metadata
+      statistics: statistics
     save: Save
     see_usages_count: See usages (%{count})
     turbo_confirm: Are you sure?
@@ -258,7 +265,7 @@ en:
     class: Class
     confidence_threshold: Filter by confidence threshold
     context: Context
-    description: Get annotations for text with ontology classes
+    description: Get annotations for text with vocabulary classes
     exclude_numbers: Exclude numbers
     exclude_synonyms: Exclude synonyms
     experiencer: Experiencer
@@ -272,19 +279,15 @@ en:
     lemmatize: Lemmatize
     match_longest_only: Match longest only
     negation: Negation
-    ontology: Ontology
+    ontology: Vocabulary
     options: Options
-    sample_text: There has been many recent studies on the use of microbial antagonists
-      to control diseases incited by soilborne and airborne plant pathogenic bacteria
-      and fungi, in an attempt to replace existing methods of chemical control and
-      avoid extensive use of fungicides, which often lead to resistance in plant pathogens.
-      In agriculture, plant growth-promoting and biocontrol microorganisms have emerged
-      as safe alternatives to chemical pesticides. Streptomyces spp. and their metabolites
-      may have great potential as excellent agents for controlling various fungal
-      and bacterial phytopathogens.
+    sample_text: This dataset includes metadata about digital resources such as title,
+      creator, and publication date, and is described using the Dublin Core vocabulary.
+      Each resource is classified using SKOS concepts and linked to relevant entities
+      with FOAF properties like knows or homepage.
     score: Score
     score_threshold: Filter by score threshold
-    select_ontologies: Select ontologies
+    select_ontologies: Select vocabularies
     select_umls_sementic_groups: Select UMLS semantic groups
     select_umls_sementic_types: Select UMLS semantic types
     temporality: Temporality
@@ -302,19 +305,19 @@ en:
     error_load: 'Error: load failed'
     error_simplify_class: 'Failure to simplify class: %{cls}'
     errors_in_fields: Errors in fields %{errors}
-    incomplete_simple_ontology: 'Incomplete simple ontology: %{id}, %{ont}'
+    incomplete_simple_ontology: 'Incomplete simple vocabulary: %{id}, %{ont}'
     loading: Loading...
     missing_class: Missing class %{root_child}
     missing_class_ontology: Missing class %{acronym} / %{concept_id}
     missing_roots: Missing roots %{id}
     missing_roots_for_ontology: Missing @roots for %{acronym}
-    no_cache: 'No cache or expired cache for ontology: %{id}'
+    no_cache: 'No cache or expired cache for vocabulary: %{id}'
     not_found_message: Not Found
-    ontology_not_found: Ontology %{acronym} not found
+    ontology_not_found: Vocabulary %{acronym} not found
     powered_by: Powered by OntoPortal
     projects: Projects
-    provide_ontology_or_concept: Please provide an ontology id or concept id with
-      an ontology id.
+    provide_ontology_or_concept: Please provide a vocabulary id or concept id with
+      a vocabulary id.
     reply: Reply
     search_for_class: Please search for a class using the Jump To field above
     try_again: There was an error, please try again
@@ -409,7 +412,7 @@ en:
     tree_view_empty: No result found
     unwatch: Unwatch
     view: View
-    view_of_the_ontology: View of the ontology %{ontology}
+    view_of_the_ontology: View of the vocabulary %{vocabulary}
     watch: Watch
   concepts:
     cancel: Cancel
@@ -428,7 +431,7 @@ en:
     request_new_term: Request new class or concept
     request_term:
       new_term_instructions: |
-        <p>This ontology integrates with OntoloBridge, allowing community users to suggest additions to the public ontology. Complete the template below to submit a term request directly to the Ontology Manager.</p>
+        <p>This vocabulary integrates with OntoloBridge, allowing community users to suggest additions to the public vocabulary. Complete the template below to submit a term request directly to the Vocabulary Manager.</p>
           <blockquote>
             <p>Term label (required)<br>Suggested term name. If a term can be described with more than one synonym, enter only the preferred name here.</p>
           </blockquote>
@@ -436,7 +439,7 @@ en:
             <p>Term Description (required)<br>A brief definition, description, or usage of the suggested term. Synonyms of additional terms may be listed in this section.</p>
           </blockquote>
           <blockquote>
-            <p>Superclass (required)<br>The parent term of the suggested term. The parent term must be an existing entry in the current ontology. The superclass can be selected directly from the class tree.</p>
+            <p>Superclass (required)<br>The parent term of the suggested term. The parent term must be an existing entry in the current vocabulary. The superclass can be selected directly from the class tree.</p>
           </blockquote>
           <blockquote>
             <p>References (optional)<br>Provide evidence that the requested term exists, such as IDs of articles or links to other resources describing the term.</p>
@@ -445,8 +448,8 @@ en:
             <p>Justification (optional)<br>Provide here any additional information about the requested term.</p>
           </blockquote>
     request_terms_instructions: |-
-      The text below is displayed to the user as the instructions on how to request new terms for your ontology.
-      You can change this text for %{acronym} ontology by clicking anywhere on the existing text to bring up the editing dialog.
+      The text below is displayed to the user as the instructions on how to request new terms for your vocabulary.
+      You can change this text for %{acronym} vocabulary by clicking anywhere on the existing text to bring up the editing dialog.
       Click 'Submit Changes' to save or 'Cancel' to discard your changes.
     submit_changes: Submit changes
     use_jump_to: Use the "Jump To" to find a class and display details, visualization,
@@ -481,13 +484,13 @@ en:
     mod_link: MOD1.4
     not_found: not found
     'null': 'null'
-    ontology_repository: This ontology repository implements %{mod_link} but does
+    ontology_repository: This vocabulary repository implements %{mod_link} but does
       not necessarily encode metadata with the same properties (%{submission_link}).
     see_metadata_used_properties: See metadata used properties
     see_possible_credits: See possible credits
     see_the_used_properties: see the used properties
     view_fair_scores_definitions: 'You are seeing the FAIRness assessment score for
-      this ontology in AgroPortal. FAIR scores are computed with the O''FAIRe methodology.
+      this vocabulary in AgroPortal. FAIR scores are computed with the O''FAIRe methodology.
       More details here: https://github.com/agroportal/fairness'
   federation:
     check_status: Checking %{portal} availability
@@ -504,19 +507,21 @@ en:
     account_title: Account information
     agroportal_figures: "%{site} in figures"
     average: Average
-    benefit1: Discover new insights and knowledge by exploring other ontologies or
-      semantic resources in the repository.
-    benefit2: Contribute to knowledge sharing and semantic interoperability in your
-      domain.
-    benefit3: Map your ontology to other relevant ones in the domain and collaborate
-      with other users.
+    benefit1: 'Discover new insights and knowledge by exploring other vocabularies
+      or semantic artefacts in the repository.
+
+      '
+    benefit2: Contribute to knowledge sharing and semantic interoperability on the
+      Web.
+    benefit3: Map your vocabulary to other relevant ones and collaborate with other
+      users.
     benefit4: Get feedback and suggestions from other users who can use and comment
-      on your ontology.
-    benefit5: Precisely describe your ontology with relevant metadata and get a FAIR
-      score for your ontology.
+      on your vocabulary.
+    benefit5: Precisely describe your vocabulary with relevant metadata and obtain
+      a FAIR score for it.
     bug: Bug
     classes: Classes
-    discover_ontologies_button: Discover ontologies
+    discover_ontologies_button: Discover vocabularies
     fair_details: See details
     fairness: FAIR Score
     feedback:
@@ -535,7 +540,7 @@ en:
       feedback_info_text_rest: or leave us a github issue here
       leave_your_feedback: Leave your feedback
       name: Name
-      ontology_submissions_request: Ontology submissions request
+      ontology_submissions_request: Vocabulary submissions request
       optional: "(optional)"
       proposition: Proposition
       proposition_url_page: Error/Proposition page URL
@@ -549,29 +554,32 @@ en:
     include_email: Please include your email
     include_name: Please include your name
     index:
-      tagline: The home of ontologies and semantic artefacts in agri-food and related
-        domains.
+      tagline: A gateway to reusable semantic vocabularies on the Web
       title: Welcome to %{site}
       welcome: Welcome to %{site},
     individuals: Individuals
-    info_tooltip_text: 'You are seing the average scores for all the public ontologies
+    info_tooltip_text: 'You are seing the average scores for all the public vocabularies
       in AgroPortal. FAIR scores are computed with the O''FAIRe methodology. More
       details here: https://github.com/agroportal/fairness'
     mappings: Mappings
     max: Max
     min: Min
     notice_feedback: Feedback has been sent
-    ontologies: Ontologies
-    ontology_submissions_request: Ontology submissions request
-    ontology_upload: Do you want to share an ontology?
-    ontology_upload_benefits: 'By uploading and sharing your ontology to %{site},
-      you can:'
-    ontology_upload_button: Submit ontology
-    ontology_upload_desc: Uploading an ontology or another semantic artefact (vocabulary,
-      terminology, thesaurus, ...) is a way of sharing your knowledge with others.
+    ontologies: Vocabularies
+    ontology_submissions_request: Vocabulary submissions request
+    ontology_upload: Do you want to share a semantic vocabulary ?
+    ontology_upload_benefits: 'By having your vocabulary included in LOV (and thus
+      in %{site}), you can:'
+    ontology_upload_button: Submit vocabulary
+    ontology_upload_desc: |-
+      LovPortal is the gateway for publishing and sharing, in a FAIR manner, semantic vocabularies (or another type of semantic artefact, ontology, terminology, thesaurus, ...). LovPortal is specifically targets domain-agnostic vocabularies.
+
+      However, LovPortal is currently not a direct upload platform. It is an OntoPortal-based instance of the Linked Open Vocabularies (LOV) platform. It mirrors the content curated and published through LOV, which remains the sole source of vocabularies for LovPortal at this time.
+
+      If you wish to make your vocabulary available on LovPortal, you must first submit it to LOV following their guideline and curation process. Note that if your vocabulary is within a discipline explicitly covered by a domain-specific ontology repository of the OntoPortal Alliance, it might be redirected there rather than in LovPortal.
     ontoportal_description: The OntoPortal Alliance %{ontoportal_link} is a consortium
       of research and infrastructure teams dedicated to promoting the development
-      of ontology repositories and semantic artefact catalogues based on the open,
+      of vocabulary repositories and semantic artefact catalogues based on the open,
       collaboratively developed OntoPortal software %{github_link}. Hereafter are
       the current public and open repositories built with the technology maintained
       by the Alliance.
@@ -584,10 +592,10 @@ en:
     recommender_annotator: Recommender and Annotator
     see_details: See details
     slices_description: Slices allow users to interact (both via API or UI) only with
-      a subset of ontologies in AgroPortal. If browsing the slice, all the portal
+      a subset of vocabularies in AgroPortal. If browsing the slice, all the portal
       features will be restricted to the chosen subset, enabling users to focus on
       their specific use cases. On AgroPortal, slices and groups are synchronized,
-      so every group has a corresponding slice displaying only the ontologies from
+      so every group has a corresponding slice displaying only the vocabularies from
       that group.
     suggest_slice: Suggest a new group/slice
     support_and_collaborations: Support & Collaborations
@@ -615,24 +623,24 @@ en:
     classes_with_no_definition: Classes with no definition
     classes_with_one_child: Classes with one child
     contributions: 'Contributions: %{title}'
-    endorsed_ontologies: Endorsed %{count} ontologies
-    fairness_interface_details: See details for each ontologies on the specific ontology
-      summary pages
+    endorsed_ontologies: Endorsed %{count} vocabularies
+    fairness_interface_details: See details for each vocabularies on the specific
+      vocabulary summary pages
     fairness_interface_hover_instruction: hover on a principle to see details
-    fairness_interface_introduction: How an ontology or a group responded successfully
+    fairness_interface_introduction: How a vocabulary or a group responded successfully
       to O’FAIRe FAIRness assessment questions
     filter_network: Filter network
-    funded_ontologies: funded %{count} ontologies
+    funded_ontologies: funded %{count} vocabularies
     funding_endorsing_organizations: Organizations funding and endorsing the most
-      ontologies
+      vocabularies
     group: group
     groups_and_categories: Groups and Categories
     individuals: Number of individuals
-    intro: Visualize the panorama of all ontologies on %{site} via metadata aggregation.
+    intro: Visualize the panorama of all vocabularies on %{site} via metadata aggregation.
     max_child_count: Max child count
     max_depth: Maximum depth
     more_properties_charts: More properties charts
-    most_active_ontologies: Most active ontologies
+    most_active_ontologies: Most active vocabularies
     most_active_organizations: Most active organizations
     most_active_people: Most active people
     most_active_people_as_reviewer: Most active user accounts
@@ -641,30 +649,32 @@ en:
     most_mentioned_people_as_reviewer: User accounts who published notes, reviews,
       and projects
     notes_count: "%{count} notes"
-    number_of_ontologies: Number of ontologies
-    number_of_ontologies_in_catalog: Number of ontologies in this catalog
-    number_of_ontologies_of_formality_level: Number of ontologies of this formality
+    number_of_ontologies: Number of vocabularies
+    number_of_ontologies_in_catalog: Number of vocabularies in this catalog
+    number_of_ontologies_of_formality_level: Number of vocabularies of this formality
       level
-    number_of_ontologies_of_type: Number of ontologies of this ontology type
-    number_of_ontologies_using_format: Number of ontologies using this format
-    number_of_ontologies_with_class_count_in_range: Number of ontologies with a class
-      count in this range
+    number_of_ontologies_of_type: Number of vocabularies of this vocabulary type
+    number_of_ontologies_using_format: Number of vocabularies using this format
+    number_of_ontologies_with_class_count_in_range: Number of vocabularies with a
+      class count in this range
     number_of_xioms_triples: Number of axioms (triples)
-    ontologies_activity_on: Ontology activity
-    ontologies_by: Ontologies by %{type}
-    ontologies_contributors: Contributors to ontology development
-    ontologies_count_by_catalog: Number of ontologies in each semantic artefact catalog
+    ontologies_activity_on: Vocabulary activity
+    ontologies_by: Vocabularies by %{type}
+    ontologies_contributors: Contributors to vocabulary development
+    ontologies_count_by_catalog: Number of vocabularies in each semantic artefact
+      catalog
     ontologies_formats: Representation language
     ontologies_languages: Natural languages
     ontologies_licenses: Licenses
-    ontologies_properties: Ontologies properties
-    ontologies_with_notes_reviews_projects: Ontologies with notes, reviews, and projects
-    ontology_fairness_evaluator: Ontology FAIRness Evaluator (O’FAIRe)
+    ontologies_properties: Vocabularies properties
+    ontologies_with_notes_reviews_projects: Vocabularies with notes, reviews, and
+      projects
+    ontology_fairness_evaluator: Vocabulary FAIRness Evaluator (O’FAIRe)
     ontology_formality_levels: Formality levels
     ontology_properties_pie_charts: Pie charts retated to object description properties
-      (i.e., meatdata properties used to describe ontology objects).
-    ontology_relations_network: Ontology relations network
-    ontology_tools: Most used tools to build ontologies
+      (i.e., meatdata properties used to describe vocabulary objects).
+    ontology_relations_network: Vocabulary relations network
+    ontology_tools: Most used tools to build vocabularies
     owl_ontology_author_uris: Properties used to specify objects author
     owl_ontology_definition_uris: Properties used to specify objects definition
     owl_ontology_preflabel_uris: Properties used to specify objects preferred label
@@ -674,9 +684,9 @@ en:
     properties_usage_proportion: Pie charts related to the most frequent values for
       certain metadata properties
     properties_use: Property usage
-    published_ontologies: published %{count} ontologies
-    relations_between_stored_ontologies: Set of relationships between %{site} ontologies
-      as captured by metadata. Green ontologies are stored in the repository while
+    published_ontologies: published %{count} vocabularies
+    relations_between_stored_ontologies: Set of relationships between %{site} vocabularies
+      as captured by metadata. Green vocabularies are stored in the repository while
       those in blue are external resources.
     reviews_count: "%{count} reviews"
     size: size
@@ -743,8 +753,8 @@ en:
     admin_logged_out: Logged out <b>%{old_user}</b>, returned to <b>%{user}</b>
     authentication_failed: "%{provider} authentication failed"
     back_home_button: Back home
-    custom_ontology_set: The display is now based on your <a href='/account#custom_ontology_set'>Custom
-      Ontology Set</a>.
+    custom_ontology_set: The display is now based on your <a href='/account#custom_vocabulary_set'>Custom
+      Vocabulary Set</a>.
     email: Email
     email_address_associated: Enter the email address associated with your account
       and we will send an email with instructions to reset your password.
@@ -759,7 +769,7 @@ en:
     login_with_provider: Login with %{provider}
     no_account: Do not have an account?
     password: Password
-    private_ontology: This ontology is private. Please login.
+    private_ontology: This vocabulary is private. Please login.
     recover_password: Recover password
     register: Register
     reset_password_again: ". Please reset your password again."
@@ -776,9 +786,9 @@ en:
     all: All
     bubble_view_legend:
       bubble_size: 'Bubble size:'
-      bubble_size_desc: The global number of mappings with all other ontologies.
+      bubble_size_desc: The global number of mappings with all other vocabularies.
       color_degree: 'Color degree:'
-      color_degree_desc: The number of mappings with the selected ontology.
+      color_degree_desc: The number of mappings with the selected vocabulary.
       less_mappings: Less mappings
       more_mappings: More mappings
       selected_bubble: The selected bubble.
@@ -798,15 +808,15 @@ en:
         save: Save
     count:
       mappings: Mappings
-      no_mappings: There are no mappings to or from this ontology
-      ontology: Ontology
+      no_mappings: There are no mappings to or from this vocabulary
+      ontology: Vocabulary
     create_new_mapping: Create new mapping
     description: Dive into an overview of the mappings in the bubble view, efficiently
-      locate a specific ontology in the table view or upload your own mappings.
+      locate a specific vocabulary in the table view or upload your own mappings.
     error_of_source_and_target: Source and target classes or concepts need to be specified
     external_mappings: External Mappings (%{number_with_delimiter})
     filter_bubbles: Filter bubbles
-    filter_ontologies: Filter ontologies in the bubble view
+    filter_ontologies: Filter vocabularies in the bubble view
     find_mappings: Find mappings of a class/concept
     form:
       contact_info: Contact information
@@ -817,7 +827,7 @@ en:
       save: Save
       source_class: Source class
     interportal_mappings: Interportal Mappings - %{acronym} (%{number_with_delimiter})
-    intro: Find all the mappings of an ontology
+    intro: Find all the mappings of a vocabulary
     loading_mappings: Loading mappings...
     mapping_created: Mapping created
     mapping_deleted: "%{map_id} deleted successfully"
@@ -838,13 +848,13 @@ en:
       internal: Internal
       interportal: Interportal
       mapping_type: Mapping type
-      ontology_acronym: Ontology (acronym)
-      ontology_acronym_placeholder: Enter the ontology acronym
-      ontology_uri_placeholder: Enter the ontology URI
+      ontology_acronym: Vocabulary (acronym)
+      ontology_acronym_placeholder: Enter the vocabulary acronym
+      ontology_uri_placeholder: Enter the vocabulary URI
       target_class: Target class
     mapping_updated: Mapping updated
     no_mappings_available: No mappings available
-    select_ontologies_list: Select ontologies
+    select_ontologies_list: Select vocabularies
     show:
       no_mappings_found: No mappings found
     show_line:
@@ -921,14 +931,13 @@ en:
     add_new_submission: Add new submission
     admin_links: Administration links
     administrator: 'Administrator:'
-    allow_users: Allow users to view the metadata of your ontology (Summary) only.
+    allow_users: Allow users to view the metadata of your vocabulary (Summary) only.
     browser:
       admin_welcome: Welcome admin,this coloring indicates admin-only features
-      search_placeholder: Filter ontologies, e.g., AGROVOC, plant
-      show_ontology_views: Show ontology views
-      show_private_ontology: Show private ontology only
-      show_retired_ontologies: Show retired ontologies
-    taxonomy_information_tooltip: See more information about %{taxonomy_type} in 
+      search_placeholder: Filter vocabularies, e.g., AGROVOC, plant
+      show_ontology_views: Show vocabulary views
+      show_private_ontology: Show private vocabulary only
+      show_retired_ontologies: Show retired vocabularies
     categories: Categories
     change_notes: Change notes
     collapse_all: Collapse All
@@ -959,9 +968,9 @@ en:
     edit_metadata: Edit metadata
     edit_natural_languages: Edit natural languages of %{acronym}
     expand_all: Expand All
-    exploring_and_searching: 'in our ontology list but they cannot explore or search
+    exploring_and_searching: 'in our vocabulary list but they cannot explore or search
       it. To enable exploring and searching, please upload a full version of your
-      ontology.
+      vocabulary.
 
       '
     fairness_assessment_questions: O'FAIRe FAIRness assessment questions
@@ -971,7 +980,7 @@ en:
     go_to_api: Go to API
     groups: Groups
     home_page: Home Page
-    htaccess_modal_title: Rewrite rules for %{acronym} ontology
+    htaccess_modal_title: Rewrite rules for %{acronym} vocabulary
     htaccess_redirection:
       instruction_1: 'Access .htaccess File:'
       instruction_1_content: Locate the .htaccess file in the root directory of your
@@ -983,9 +992,9 @@ en:
       instruction_3: 'Enable rewrite module (Linux):'
       instruction_3_content: you'll need to ensure that the Apache module called 'rewrite'
         is enabled by running the command `sudo a2enmod rewrite`
-    htaccess_redirection_description: We offer a seamless solution to make your ontology
+    htaccess_redirection_description: We offer a seamless solution to make your vocabulary
       URIs resolvable and content negotiable by allowing URL redirection for your
-      ontology URIs to our Agroportal URIs. To facilitate this process, we've provided
+      vocabulary URIs to our Agroportal URIs. To facilitate this process, we've provided
       you with a set of .htaccess rewrite rules. By following the simple instructions
       below, you'll be able to implement these rules swiftly and efficiently, ensuring
       smooth redirection
@@ -996,7 +1005,7 @@ en:
     metadata_properties: of %{acronym}  metadata properties are filled
     modification_date: Modification date
     natural_languages: Natural languages
-    new_ontology_is_processing: The ontology is processing. Sections such as %{ontology}
+    new_ontology_is_processing: The vocabulary is processing. Sections such as %{vocabulary}
       will be available  once processing is complete.
     new_versions_loaded: New submission loaded on a nightly basis.
     nginx_redirection:
@@ -1019,35 +1028,35 @@ en:
     no_license: No license
     no_projects_using_ontology: No projects using %{acronym}
     no_views: No views available for %{acronym}.
-    notification_message: 'When your ontology is ready for viewing, you will receive
+    notification_message: 'When your vocabulary is ready for viewing, you will receive
       an email notification and it will be available here:'
-    ontology_is_processing: The ontology is processing. Sections such as %{ontology}
+    ontology_is_processing: The vocabulary is processing. Sections such as %{vocabulary}
       will be updated once processing is complete.
-    ontology_parsing_succeeded: 'The ontology parsing succeeded, but some processing
+    ontology_parsing_succeeded: 'The vocabulary parsing succeeded, but some processing
       steps failed, here are the current statuses: %{status}'
-    ontology_processing_failed: 'The ontology processing failed, with the current
+    ontology_processing_failed: 'The vocabulary processing failed, with the current
       statuses: %{status}'
-    ontology_search_prompt: Search an ontology or a term (e.g., plant height)
-    ontology_submitted: Ontology submitted successfully!
-    ontology_types: Ontology types
+    ontology_search_prompt: All you need is LOV ;)
+    ontology_submitted: Vocabulary submitted successfully!
+    ontology_types: Vocabulary types
     outside: outside
-    private_ontology: Private ontology
+    private_ontology: Private vocabulary
     processing_message: |
-      We will now put your ontology in the queue to be processed. Please keep in mind that it may take up to several
-      hours before %{site} users will be able to explore and search your ontology.
+      We will now put your vocabulary in the queue to be processed. Please keep in mind that it may take up to several
+      hours before %{site} users will be able to explore and search your vocabulary.
     projects_using_ontology: Projects using %{acronym}
     redirection_note: |-
       This redirection works only for uri with the form of: url/path/resource_id
       This will not work for uris in the form of: url/path/to/something#resource_id OR url/path/to/something:resource_id
     referred_to: It can also be referred to as
-    relation_with_other_ontologies: Relation with other ontologies either in %{inside}
+    relation_with_other_ontologies: Relation with other vocabularies either in %{inside}
       or %{outside}
     release_date: Release date
     sections:
       add_acronym_widgets: Add %{acronym} Web Widgets to your site
       additional_parameters: Additional parameters are documented on the
-      autocomplete_widget_accesses: The autocomplete widget accesses ontology content
-        from the latest version of the ontology.
+      autocomplete_widget_accesses: The autocomplete widget accesses vocabulary content
+        from the latest version of the vocabulary.
       average_number_of_children: Average number of children
       can_also_view: You can also view a
       class_name_description: put the preferred name of the class (e.g., "Common Neoplasm");
@@ -1069,7 +1078,8 @@ en:
       detailed_demonstration: detailed demonstration
       download: Download the
       download_as_csv: Download as CSV
-      enter_list_of_ontologies: You can enter a comma-separated list of ontology ids
+      enter_list_of_ontologies: You can enter a comma-separated list of vocabulary
+        ids
       example_1: Example 1 (start typing the class name to get its full URI)
       example_2: Example 2 (get the ID for a class)
       example_3: Example 3 (get the preferred name for a class)
@@ -1086,7 +1096,7 @@ en:
         following fields (note how the ''a'' from the name attribute is appended to
         the id attribute):'
       identifiers: Identifiers
-      identifiers_tooltip: Principal identifiers of the ontology.
+      identifiers_tooltip: Principal identifiers of the vocabulary.
       include_definitions: 'To include definitions in the Jump To drop-down, add the
         following variable in Javascript:'
       include_file: In the header for the page where you want the form field, include
@@ -1102,11 +1112,11 @@ en:
       info_tooltip_configuration: Regroup all the metadata properties used by the
         portal to configure the behavior of the resource
       info_tooltip_links: Metadata properties that highlight the links enabling access
-        to datasets, downloading ontologies, etc
-      info_tooltip_projects: Details pertaining to the utilization of the ontology.
+        to datasets, downloading vocabularies, etc
+      info_tooltip_projects: Details pertaining to the utilization of the vocabulary.
       info_tooltip_properties_dropdown: Metadata properties primarily encompass the
-        design, methods, and actions to create the ontology. This includes elements
-        such as the tools and software employed by the creator of the ontology during
+        design, methods, and actions to create the vocabulary. This includes elements
+        such as the tools and software employed by the creator of the vocabulary during
         its configuration.
       instances_search_placeholder: Search an Instance in %{acronym}
       label_groups: Groups
@@ -1125,10 +1135,10 @@ en:
         languages: Languages
         metrics: Metrics
         metrics_link_title: Information and evolution diagrams about metrics and other
-          measurements of the ontology.
+          measurements of the vocabulary.
         not_calculated_metrics: We have not yet calculated metrics for %{acronym}
         pull_location: Pull location
-        relations_network: Ontology relations network
+        relations_network: Vocabulary relations network
         see_all_metrics: See all the metrics of %{acronym}
         show_modal_title_1: All the metrics of %{acronym}
         show_modal_title_2: Evolution of the number of %{metric} in %{acronym} per
@@ -1153,18 +1163,18 @@ en:
       put_on_server: and put it on your server.
       schemes_search_placeholder: Search a scheme in %{acronym}
       scroll_down_to_see_more: Scroll down to see more
-      set_the_variable: 'You can set the variable to ''all'' to search all ontologies
+      set_the_variable: 'You can set the variable to ''all'' to search all vocabularies
         in %{site}:'
       shortid: shortid
       uri: uri
-      use_all_to_search: 'use ''all'' to search across all %{site} ontologies:'
+      use_all_to_search: 'use ''all'' to search across all %{site} vocabularies:'
       use_following_parameters: 'You can use the following parameters to select which
         value will be placed into the user-visible input field:'
-      use_list: 'In addition to single ontology ids, you can use a list:'
-      use_ontology: will use a ontology (ontology id is acronym) and will put the
-        class URI in the field after the user selects the class from the pull-down
+      use_list: 'In addition to single vocabulary ids, you can use a list:'
+      use_ontology: will use a vocabulary (vocabulary id is acronym) and will put
+        the class URI in the field after the user selects the class from the pull-down
         list.
-      use_quick_jump: If you would like to use Quick Jump across multiple ontologies
+      use_quick_jump: If you would like to use Quick Jump across multiple vocabularies
       use_widget: 'On your form, for the fields where you want to use the class-selection
         widget, specify the field''s class in the following format:'
       views: Views of %{acronym}
@@ -1176,36 +1186,38 @@ en:
       widget_block_component_description_3: Display a visualization for a given class/concept
         in %{acronym}
       widget_block_component_description_4: Display class/concept hiearchy tree with
-        a search field for ontology %{acronym}
+        a search field for vocabulary %{acronym}
       widget_block_component_title_1: Jump to
       widget_block_component_title_2: Autocomplete
       widget_block_component_title_3: Visualization
       widget_block_component_title_4: Tree Widget
-      widgets: Widgets are only available for ontologies stored in %{site}.
+      widgets: Widgets are only available for vocabularies stored in %{site}.
     see_details: See details
     showing: Showing
-    showing_ontologies_size: Showing %{ontologies_size} of %{analytics_size} from %{portals}
+    showing_ontologies_size: Showing %{ontologies_size} of %{analytics_size} from
+      %{portals}
     submission: Submission
-    submit_new_ontology: Submit new ontology
-    submitting_ontology: Thank you for submitting your ontology to %{site}.
-    submitting_ontology_view: Thank you for submitting your ontology view to %{site}.
-    upload_an_ontology: Ontology upload. Sections such as %{ontology} will be available
-      once done.
+    submit_new_ontology: Submit new vocabulary
+    submitting_ontology: Thank you for submitting your vocabulary to %{site}.
+    submitting_ontology_view: Thank you for submitting your vocabulary view to %{site}.
+    taxonomy_information_tooltip: 'See more information about %{taxonomy_type} in '
+    upload_an_ontology: Vocabulary upload. Sections such as %{vocabulary} will be
+      available once done.
     upload_date: Upload date
     upload_local_file: Upload local file
     uri: URI
     users_can_see: Users can now see
     view_license: View license
     views: Views
-    your_ontology: your ontology
+    your_ontology: your vocabulary
   ontologies_metadata_curator:
     alert_success_submissions: Submissions were successfully updated
     apply_the_change_for_all: Apply the change for all
     get_values: Get values
     include_all_submissions: Include all submissions
-    ontologies: Ontologies
+    ontologies: Vocabularies
     save: Save
-    select_ontologies_and_metadata: Select ontologies and metadata properties
+    select_ontologies_and_metadata: Select vocabularies and metadata properties
     start_the_bulk_edit: Select in the table submissions (rows) and metadata properties
       (columns) to start the bulk edit
     update_the_current_displayed_content: 'will update the current displayed content
@@ -1214,18 +1226,18 @@ en:
     apply: Apply
     cancel: Cancel
     clear_selection: Clear selection
-    hide_retired_ontologies: Hide retired ontologies
-    ontologies_advanced_selection: Ontologies advanced selection
-    search_hint: Filter ontologies ...
+    hide_retired_ontologies: Hide retired vocabularies
+    ontologies_advanced_selection: Vocabularies advanced selection
+    search_hint: Filter vocabularies ...
     select_all: Select all
-    show_ontology_view: Show ontology views
+    show_ontology_view: Show vocabulary views
     tabs_title:
       categories: Categories
       formality_levels: Formality levels
       format: Format
       groups: Groups
       natural_languages: Natural languages
-      ontology_types: Ontology types
+      ontology_types: Vocabulary types
     unselect_all: Unselect all
   ontology_details:
     concept:
@@ -1278,14 +1290,14 @@ en:
         pre-configured version of commonly-used open source NCBO software running
         on a Linux operating system.
     more_information: for more information on working with the Appliance.
-    ontologies_api: Ontologies API (REST web service)
+    ontologies_api: Vocabularies API (REST web service)
     problem_adding_account: 'Problem adding account <strong>%{id}</strong>: account
       does not exist'
     recommender: Recommender
     require_login: You must be logged in to access this section
     see_documentation: Please see our
     title: OntoPortal virtual appliance download
-    web_user_interface: BioPortal Web User Interface (including ontology visualization,
+    web_user_interface: BioPortal Web User Interface (including vocabulary visualization,
       widgets, and Annotator UI)
   projects:
     contacts: Contacts
@@ -1314,16 +1326,16 @@ en:
       home_page: 'Homepage: *'
       name: 'Name: *'
       select_administrators: Select administrators
-      select_ontologies: Select ontologies used
+      select_ontologies: Select vocabularies used
     home_page: Home page
     index:
-      intro: Browse a selection of projects that use %{site} ontologies
+      intro: Browse a selection of projects that use %{site} vocabularies
     institutions: Institutions
     new:
       create_project: Create project
       new_project: New project
       title: Add a project
-    ontologies: Ontologies
+    ontologies: Vocabularies
     project_description: Project Description
     project_not_found: 'Project not found: %{id}'
     project_successfully_created: Project successfully created
@@ -1336,8 +1348,9 @@ en:
       edit_project: Edit Project
       home_page: 'Home Page:'
       institution: 'Institution:'
-      no_ontologies_associated: No ontologies are currently associated with this project
-      ontologies_used: Ontologies Used
+      no_ontologies_associated: No vocabularies are currently associated with this
+        project
+      ontologies_used: Vocabularies Used
       title: Project %{name}
     title: Projects list
     view_projects_help: View projects help
@@ -1359,14 +1372,14 @@ en:
     get_recommendations: Get recommendations
     hint: Paste a paragraph of text or some keywords ...
     input: Input
-    intro: Get recommendations for the most relevant ontologies from an excerpt of
-      text or a list of keywords
+    intro: Get recommendations for the most relevant vocabularies from an excerpt
+      of text or a list of keywords
     keywords: Keywords
     knowledge_detail: Knowledge detail
-    max_ont_set: Maximum number of ontologies per set
-    ontologies: Ontologies
-    ontologies_configuration: Ontologies configuration
-    ontology_sets: Ontology sets
+    max_ont_set: Maximum number of vocabularies per set
+    ontologies: Vocabularies
+    ontologies_configuration: Vocabularies configuration
+    ontology_sets: Vocabulary sets
     options: Options
     output: Output
     results_table:
@@ -1375,10 +1388,10 @@ en:
       coverage_score: Coverage score
       detail_score: Detail score
       final_score: Final score
-      ontology: Ontology
+      ontology: Vocabulary
       specialization_score: Specialization score
-    results_title: Recommended ontologies
-    select_ontologies: Select ontologies
+    results_title: Recommended vocabularies
+    select_ontologies: Select vocabularies
     specialization: Specialization
     text: Text
     title: Recommender
@@ -1398,9 +1411,9 @@ en:
     title: Register
     username: Username
   resource_term:
-    ontology: ontology
-    ontology_plural: ontologies
-    ontology_single: an ontology
+    ontology: vocabulary
+    ontology_plural: vocabularies
+    ontology_single: a vocabulary
     semantic_artefact: semantic artefact
     semantic_artefact_plural: semantic artefacts
     semantic_artefact_single: a semantic artefact
@@ -1425,9 +1438,9 @@ en:
       include_in_search_title: Include in search
       include_in_search_values:
         obolete_classses: Obsolete classes
-        ontology_views: Ontology views
+        ontology_views: Vocabulary views
         property_values: Property values
-      ontologies: Ontologies
+      ontologies: Vocabularies
       search_language: Search language
       show_only_title: Show only
       show_only_values:
@@ -1436,67 +1449,71 @@ en:
     hide_advanced_options: Hide options
     match_in: Match in
     no_search_class_provided: No search class provided
-    ontologies: ontologies
+    ontologies: vocabularies
     result_component:
       details: Details
-      more_from_ontology: more from this ontology
+      more_from_ontology: more from this vocabulary
       reuses_in: Reuses in
       visualize: Vizualize
-    search_place_holder: Enter a term, e.g., plant height
+    search_place_holder: All you need is LOV ;)
     show_advanced_options: Show options
   show_advanced_options: Show advanced options
+  sparql_endpoint:
+    description: Interrogez des ensembles de données structurés à l'aide de SPARQL
+      pour récupérer, filtrer et manipuler efficacement les vocabulaires.
+    title: Éditeur de requêtes SPARQL
   statistics:
     date: Date
     lead: "(last %{last_years} years)"
-    ontologies: Ontologies
-    ontology_visits: Ontology visits
+    ontologies: Vocabularies
+    ontology_visits: Vocabulary visits
     projects: Projects
     title: "%{portal} Statistics"
     users: Users
   submission_inputs:
-    accounts_allowed: Add or remove accounts that are allowed to see this ontology
+    accounts_allowed: Add or remove accounts that are allowed to see this vocabulary
       in %{portal_name}.
     administrators: Administrators
     contact: Contact
     contact_email: "%{name} Email"
     contact_name: "%{name} Name"
-    deprecated_help: An ontology with status <strong>retired</strong> shall necessarily
+    deprecated_help: An vocabulary with status <strong>retired</strong> shall necessarily
       be also <strong>deprecated</strong>, but not the opposite.
-    edit_metadata_instruction: Edit the metadata of your ontology here. Some of these
-      values are used by %{portal_name} functionalities, including for FAIRness assessment.
-      %{link)
+    edit_metadata_instruction: Edit the metadata of your vocabulary here. Some of
+      these values are used by %{portal_name} functionalities, including for FAIRness
+      assessment. %{link)
     edit_metadata_instruction_link: See guidelines and recommendations for metadata
       here.
-    edit_ontology_title: Edit ontology
+    edit_ontology_title: Edit vocabulary
     equivalents: Equivalents
     groups: Groups
     help_creator: The following properties take for value an 'agent' in %{portal_name}
-      (either a person or an organization). These agents are shared over all the ontologies
+      (either a person or an organization). These agents are shared over all the vocabularies
       and suggested with autocompletion if they already exist. Editing an agent here
-      will change it to all the ontologies that agent is involved in.
+      will change it to all the vocabularies that agent is involved in.
     help_text: Help text
     known_usage_help: Consider also declaring %{metadata_knownUsage_help}
-    known_usage_help_link: the projects that are using the ontology
+    known_usage_help_link: the projects that are using the vocabulary
     license_help: "%{portal_name} requires an URI for the license. If you do not find
       your choice here, %{link}, contact support."
     license_help_link: Please pick up an URI from here.
     metadata_selector_label: Filter properties to show
     metadata_selector_placeholder: Select properties
-    ontology_obo_language_help: 'OBO ontologies submitted to %{portal_name} will be
-      parsed by the OWL-API which integrates %{link}  The resulting RDF triples will
-      then be loaded in %{portal_name} triple-store.
+    ontology_obo_language_help: 'OBO vocabularies submitted to %{portal_name} will
+      be parsed by the OWL-API which integrates %{link}  The resulting RDF triples
+      will then be loaded in %{portal_name} triple-store.
 
       '
     ontology_obo_language_link: the OBOinOWL parser.
-    ontology_owl_language_help: 'OWL ontologies submitted to %{portal_name} will be
-      parsed by the OWL-API. An easy way to verify if your ontology will parse is
-      to open it with %{link} software which does use the same component.
+    ontology_owl_language_help: 'OWL vocabularies submitted to %{portal_name} will
+      be parsed by the OWL-API. An easy way to verify if your vocabulary will parse
+      is to open it with %{link} software which does use the same component.
 
       '
     ontology_owl_language_link: the Protégé
     ontology_skos_language_help: 'SKOS vocabularies submitted to %{portal_name} shall
       follow a few constraints (e.g., contain a minimum of one skos:ConceptScheme
-      also typed as owl:Ontology)  and top concept assertion. %{link}
+      also typed as owl:Vocabulary)  and top concept assertion. %{link}
 
       '
     ontology_skos_language_link: Please refer to the documentation for more details.
@@ -1504,17 +1521,17 @@ en:
 
       '
     ontology_umls_language_link: by the UMLS2RDF tool.
-    ontology_view_of_another_ontology: Is this ontology a view of another ontology?
+    ontology_view_of_another_ontology: Is this vocabulary a view of another vocabulary?
     validators: Validators
     version_help: For more information on how to encode versioning information in
-      an ontology, see %{link}
+      a vocabulary, see %{link}
     version_helper_link: guidelines and recommendations.
     visibility: Visibility
   submissions:
     actions: Actions
     delete_submission_alert:
       content_1: Are you sure you want to delete submission <span style='color:red;font-weight:bold;'>
-      content_2: "</span> for ontology <span style='color:red;font-weight:bold;'>"
+      content_2: "</span> for vocabulary <span style='color:red;font-weight:bold;'>"
       content_3: "</span>?<br/><b>This action CAN NOT be undone!!!</b>"
     download: Download
     edit_button: Edit
@@ -1532,21 +1549,21 @@ en:
     go_to_api: Go to API
     id: ID
     modified: Modified
-    no_submissions_for_ontology: 'No submissions for ontology: %{ontology}'
+    no_submissions_for_ontology: 'No submissions for vocabulary: %{ontology}'
     save_button: Save
     submission_updated_successfully: Submission updated successfully
     submitted: Submitted
     toggle_dropdown: Toggle dropdown
     version: Version
   taxonomy:
-    description: '"In %{portal}, ontologies are organized in groups and tagged with
-      categories. Typically, groups associate ontologies from the same project or
+    description: '"In %{portal}, vocabularies are organized in groups and tagged with
+      categories. Typically, groups associate vocabularies from the same project or
       organization for better identification of the provenance. Whereas categories
-      are about subjects/topics and enable to classify ontologies. As of 2016, %{portal}''s
+      are about subjects/topics and enable to classify vocabularies. As of 2016, %{portal}''s
       categories were established in cooperation with FAO AIMS. In 2024, we moved
       to UNESCO Thesaurus (https://vocabularies.unesco.org). Groups and categories,
       along with other metadata, can be used on the “Browse” page of %{portal} to
-      filter out the list of ontologies."'
+      filter out the list of vocabularies."'
     groups_and_categories: Groups and Categories
     no_taxonomy_created: No %{type} are created yet
     show_sub_categories: Show sub categories
@@ -1575,8 +1592,8 @@ en:
   users:
     account_successfully_created: Account was successfully created
     account_successfully_updated: Account was successfully updated
-    custom_ontologies_cleared: Custom Ontologies were cleared
-    custom_ontologies_saved: Custom Ontologies were saved
+    custom_ontologies_cleared: Custom Vocabularies were cleared
+    custom_ontologies_saved: Custom Vocabularies were saved
     edit:
       admin_privileges: Are you sure you want to revoke admin privileges for this
         user?
@@ -1592,7 +1609,7 @@ en:
       orcid_id: ORCID
       user_to_admin: Are you sure you want to make this user an admin?
       username: Username
-    error_saving_custom_ontologies: Error saving Custom Ontologies, please try again
+    error_saving_custom_ontologies: Error saving Custom Vocabularies, please try again
     error_subscribe: Something went wrong ...
     first_name_required: First name field is required
     index:
@@ -1605,7 +1622,7 @@ en:
       first_name: First name
       last_name: Last name
       login_as: Login as
-      ontologies: Ontologies
+      ontologies: Vocabularies
       project: Project
       roles: Roles
       turbo_confirm: Are you sure?
@@ -1614,12 +1631,12 @@ en:
     not_permitted: Not permitted
     recaptcha_validation: Please fill in the proper text from the supplied image
     show:
-      accessible_semantic_resources: Accessible Ontologies
+      accessible_semantic_resources: Accessible Vocabularies
       api_documentation: API documentation
       api_key_description: Your API Key can be used to access  %{portal} Web services
-      custom_semantic_resource: Custom ontology set
-      customize_portal_display: 'Customize your %{portal} display: Pick the ontologies
-        that you want to see on %{portal} will hide all other ontologies.'
+      custom_semantic_resource: Custom vocabulary set
+      customize_portal_display: 'Customize your %{portal} display: Pick the vocabularies
+        that you want to see on %{portal} will hide all other vocabularies.'
       email: 'Email:'
       first_name: 'First name:'
       github_id: 'GitHub account:'
@@ -1628,24 +1645,24 @@ en:
       mailing_list_subscription: Mailing list subscription
       modify_custom_semantic_resource: |
         visit the main site
-        to modify your Custom Ontology Set.
+        to modify your Custom Vocabulary Set.
       my_account: My account
       no_project_created: No project created
-      no_semantic_resources: You haven't picked any ontologies yet
-      no_uploaded_resources: You didn't upload any ontology yet
-      not_subscribed: Not subscribed to any ontology
+      no_semantic_resources: You haven't picked any vocabularies yet
+      no_uploaded_resources: You didn't upload any vocabulary yet
+      not_subscribed: Not subscribed to any vocabulary
       note_feature_logged_in: 'Note: this feature works only when you are logged in.'
       notes: Notes
       orcid_id: 'ORCID:'
       please: Please
       projects_created: Projects created
-      save_custom_semantic_resources: Save custom ontologies
-      select_semantic_resources: Select ontologies
-      submitted_semantic_resources: Submitted ontologies
+      save_custom_semantic_resources: Save custom vocabularies
+      select_semantic_resources: Select vocabularies
+      submitted_semantic_resources: Submitted vocabularies
       subscribe: Subscribe
       subscriptions: Subscriptions
       unsubscribe: Unsubscribe
-      upload_semantic_resources: Upload Ontologies
+      upload_semantic_resources: Upload Vocabularies
       username: 'Username:'
     subscribe_flash_message: 'You have successfully  %{action} %{to_or_from} our user
       mailing list: %{list}'
@@ -1662,5 +1679,5 @@ en:
   visits:
     count: concepts
     name: name
-    ontology_visits: Ontology visits
+    ontology_visits: Vocabulary visits
     visits: visits
